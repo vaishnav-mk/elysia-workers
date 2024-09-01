@@ -3,10 +3,13 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "cheerio": "^1.0.0",
+    "elysia": "latest",
+    "wrangler": "^3.73.0"
   },
   "devDependencies": {
     "bun-types": "latest"
